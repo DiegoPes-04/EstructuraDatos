@@ -3,34 +3,73 @@ import java.util.Collections;
 
 public class MainClass
 {
-    static Persona [] personas_s;
+    
     public static void main(String [] args)
     {   
 
         //Ordenamiento con un arrglo dinámico
         ArrayList<Persona> personas = new ArrayList<Persona>();
-        personas.add(new Persona(25, "Diego"));
+        personas.add(new Persona(26, "Diego"));
         personas.add(new Persona(30, "Diana"));
         personas.add(new Persona(32, "Catalina"));
         personas.add(new Persona(45, "Pedro"));
         personas.add(new Persona(5, "Sebastian"));
         Collections.sort(personas);
-        for(Persona p : personas)
+        for(Persona p : personasS)
         {
             System.out.println(p);
         }
 
         //Ordenamiento con un arreglo estático
         personas_s = new Persona [10];
-        //Agregar elementos:
-        //Llamar a los dos algoritmos de ordenamiento:
-        //Imprimirlo:
-
+        personas_s [0] = new  Persona(28,"Ximena");
+        personas_s [0] = new  Persona(25,"Diego");
+        personas_s [0] = new  Persona(30,"Diana");
+        personas_s [0] = new  Persona(32,"Catalina");
+        personas_s [0] = new  Persona(45,"Pedro");
+        personas_s [0] = new  Persona(5,"Sebastian");
         
+        miOrdenamiento_MS();
+
+        //Imprimir arreglo ordenado
+        for ( Persona p:personas_s)
+        {
+            System.out.println(p);
+        }
+
+        //Buscar elemento con busqueda binaria
+        int pos_encontrado = buscarPersona_BinarySearch(new Persona(28,"Ximena"));
+        System.out.println("Se encontro la información en la posición  %d", pos_encontrado);
     }
 
     /*
-     * Ordenar usando quicksort una lista de objeto con compareTo
+     * Ordenar usando quicksort una lista de objeto con compareToSS
      */
+
+
+    public static int buscarPersona_BinarySearch (Persona cual)
+
+    {
+        int indexPersona = -1;
+        int low = 0, high = personas_s.length - 1;
+        while (low <= high) 
+        {
+            int mid = low + (high - low) / 2;
+
+            // Check if x is present at mid
+            if (personas_s[mid].equals(cual) == 0) //Usar equals
+                indexPersona =mid;
+
+            // If x greater, ignore left half
+            if (personas_s[mid].compareTo(cual) < 0)
+                low = mid + 1;
+
+            // If x is smaller, ignore right half
+            else
+                high = mid - 1;
+        }
+
+        return indexPersona;
+    }
     
 }
