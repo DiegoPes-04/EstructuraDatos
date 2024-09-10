@@ -1,0 +1,64 @@
+La notación O o notación Big O es una forma de describir la complejidad computacional de un algoritmo en términos de tiempo o espacio. Esta notación nos ayuda a entender cómo se comporta un algoritmo a medida que el tamaño de los datos de entrada (n) crece, y se enfoca principalmente en los términos dominantes que afectan el rendimiento en escenarios de gran escala.
+
+Generalidades de la notación O:
+Qué mide la notación O:
+
+Complejidad temporal: Indica cuánto tiempo toma un algoritmo para ejecutarse en función del tamaño de la entrada.
+Complejidad espacial: Indica cuánta memoria o espacio adicional utiliza un algoritmo durante su ejecución.
+Propósito:
+
+La notación Big O ignora constantes y términos de menor importancia para centrarse en el comportamiento general del algoritmo cuando el tamaño de la entrada crece indefinidamente.
+Se utiliza para comparar la eficiencia de diferentes algoritmos y entender cuál es más adecuado para grandes volúmenes de datos.
+Clases comunes de complejidad (en términos de tiempo):
+
+O(1) – Tiempo constante: El algoritmo toma la misma cantidad de tiempo independientemente del tamaño de la entrada.
+Ejemplo: Acceso directo a un elemento en un arreglo.
+O(log n) – Tiempo logarítmico: El tiempo de ejecución crece lentamente a medida que el tamaño de la entrada aumenta. Generalmente asociado a algoritmos que dividen el problema a la mitad en cada paso (por ejemplo, búsqueda binaria).
+O(n) – Tiempo lineal: El tiempo de ejecución crece proporcionalmente al tamaño de la entrada.
+Ejemplo: Recorrer un arreglo de tamaño n.
+O(n log n) – Tiempo lineal logarítmico: Es más eficiente que O(n²), pero menos que O(n). Se encuentra en algoritmos de ordenamiento eficientes como Merge Sort o QuickSort.
+O(n²) – Tiempo cuadrático: El tiempo de ejecución crece proporcional al cuadrado del tamaño de la entrada. Aparece en algoritmos que tienen bucles anidados.
+Ejemplo: Ordenamiento burbuja o selección en su peor caso.
+O(2ⁿ) – Tiempo exponencial: El tiempo de ejecución crece exponencialmente con el tamaño de la entrada. Este tipo de complejidad es impráctica para grandes entradas.
+Ejemplo: Algoritmos que solucionan problemas mediante prueba y error exhaustiva, como ciertos algoritmos de programación dinámica o de fuerza bruta.
+Cómo funciona:
+
+Se enfoca en el término dominante, ignorando los detalles más pequeños. Por ejemplo, si un algoritmo tiene una complejidad de 
+5
+𝑛
+2
++
+3
+𝑛
++
+10
+5n 
+2
+ +3n+10, se expresa como O(n²), ya que el término cuadrático es el que crece más rápido a medida que el tamaño de entrada aumenta.
+Escalabilidad:
+
+La notación Big O nos ayuda a entender cómo un algoritmo "escala" cuando el tamaño de la entrada crece. Por ejemplo, un algoritmo con O(n) crece linealmente, mientras que uno con O(n²) se vuelve mucho más lento a medida que aumentan los datos.
+Ejemplos prácticos de notación Big O:
+Buscar un elemento en una lista no ordenada mediante un bucle for toma O(n) porque necesitas revisar cada elemento.
+Búsqueda binaria en una lista ordenada toma O(log n), ya que reduces el espacio de búsqueda a la mitad en cada paso.
+Ordenamiento burbuja es O(n²), ya que en el peor de los casos, necesita realizar n comparaciones para cada uno de los n elementos.
+Resumen de las principales categorías de Big O:
+Notación  	Nombre	                  Ejemplo
+O(1)	        Tiempo constante	      Acceder a un índice específico de un arreglo
+O(log n)	    Tiempo logarítmico	    Búsqueda binaria
+O(n)	        Tiempo lineal	          Recorrer una lista
+O(n log n)	  Tiempo lineal           log	Merge Sort, QuickSort
+O(n²)	        Tiempo cuadrático	      Ordenamiento burbuja
+O(2ⁿ)	        Tiempo exponencial	    Algoritmos de fuerza bruta en problemas de optimización
+En resumen, la notación Big O es una herramienta clave en la teoría de algoritmos que nos permite analizar su eficiencia y escalabilidad en función del tamaño de los datos.
+
+
+
+
+
+
+
+
+
+
+
