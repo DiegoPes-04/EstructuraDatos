@@ -1,0 +1,71 @@
+/*
+Los métodos de ordenamiento son algoritmos que organizan los elementos de una lista o arreglo en un cierto orden, típicamente ascendente o descendente. A continuación te explico los conceptos de algunos de los métodos de ordenamiento más comunes:
+
+1. Método de Burbuja (Bubble Sort)
+Concepto: Compara cada par de elementos adyacentes y los intercambia si están en el orden incorrecto. Este proceso se repite hasta que la lista esté ordenada.
+Complejidad temporal: O(n²) en el peor caso, donde n es el número de elementos.
+Ventaja: Es fácil de entender y programar.
+Desventaja: Es ineficiente para listas grandes debido a su complejidad.
+
+2. Método de Selección (Selection Sort)
+Concepto: Encuentra el elemento más pequeño en una lista y lo coloca en la primera posición. Luego, busca el siguiente más pequeño y lo coloca en la segunda posición, y así sucesivamente.
+Complejidad temporal: O(n²).
+Ventaja: Hace el menor número de intercambios posibles.
+Desventaja: También es ineficiente en listas grandes.
+
+3. Método de Inserción (Insertion Sort)
+Concepto: Construye la lista ordenada de forma incremental, tomando cada elemento y colocándolo en la posición correcta respecto a los elementos anteriores.
+Complejidad temporal: O(n²) en el peor caso, pero es eficiente para listas pequeñas o casi ordenadas.
+Ventaja: Fácil de implementar y eficiente para listas pequeñas o casi ordenadas.
+Desventaja: No es ideal para listas grandes.
+
+4. Método de Quicksort
+Concepto: Selecciona un elemento como pivote, y divide la lista en dos sublistas: una con los elementos menores al pivote y otra con los elementos mayores. Luego, ordena cada sublista recursivamente.
+Complejidad temporal: O(n log n) en el promedio, pero O(n²) en el peor caso.
+Ventaja: Muy eficiente en la mayoría de los casos.
+Desventaja: Puede volverse ineficiente si la lista está desbalanceada (por ejemplo, si siempre se elige el mayor o menor valor como pivote).
+
+5. Método Merge Sort
+Concepto: Divide la lista en dos mitades, ordena cada mitad de manera recursiva y luego fusiona las dos listas ordenadas.
+Complejidad temporal: O(n log n).
+Ventaja: Es muy eficiente y estable.
+Desventaja: Utiliza más espacio en memoria que otros algoritmos debido a la necesidad de almacenamiento adicional para la fusión.
+
+6. Método Heapsort
+Concepto: Convierte la lista en una estructura de datos llamada heap (montículo), que permite extraer el elemento máximo o mínimo de manera eficiente. Luego, extrae el elemento máximo repetidamente y lo coloca en su posición final.
+Complejidad temporal: O(n log n).
+Ventaja: Es eficiente y no requiere memoria adicional.
+Desventaja: Es más complejo de implementar que otros algoritmos como el Quicksort o Merge Sort.
+
+
+Busqueda binaria 
+La búsqueda binaria es un algoritmo eficiente para encontrar un elemento en una lista ordenada. En lugar de revisar cada elemento uno por uno (como en una búsqueda lineal), la búsqueda binaria divide repetidamente el conjunto en mitades para reducir el número de comparaciones necesarias.
+
+Concepto de Búsqueda Binaria:
+Requisito: La lista debe estar ordenada antes de aplicar la búsqueda binaria.
+Proceso:
+Se comienza comparando el elemento que se busca (llamado "elemento objetivo") con el elemento del medio de la lista.
+Si el elemento objetivo es igual al del medio, la búsqueda termina.
+Si el elemento objetivo es menor que el del medio, la búsqueda continúa en la mitad izquierda de la lista.
+Si el elemento objetivo es mayor que el del medio, la búsqueda continúa en la mitad derecha de la lista.
+Este proceso se repite dividiendo la lista por la mitad en cada paso hasta encontrar el elemento o determinar que no está presente.
+Pasos detallados:
+Definir el índice bajo (inicio) y alto (final) de la lista.
+Encontrar el índice medio: medio = (inicio + final) / 2.
+Comparar el valor medio con el valor objetivo:
+Si son iguales, el elemento se ha encontrado.
+Si el valor objetivo es menor que el valor medio, se ajusta el índice alto al valor medio - 1.
+Si el valor objetivo es mayor que el valor medio, se ajusta el índice bajo al valor medio + 1.
+Repetir el proceso hasta encontrar el valor o hasta que el índice bajo sea mayor que el índice alto (lo que significa que el valor no está en la lista).
+Complejidad Temporal:
+O(log n) en el peor caso, donde n es el número de elementos en la lista. Esto lo hace mucho más eficiente que una búsqueda lineal, que tiene una complejidad de O(n).
+Ejemplo:
+Imagina que tienes una lista ordenada: [1, 3, 5, 7, 9, 11, 13, 15] y quieres buscar el número 7.
+
+Se compara el 7 con el elemento del medio, que es 9.
+Como 7 es menor que 9, se descarta la mitad derecha de la lista.
+Ahora solo queda considerar [1, 3, 5, 7]. El nuevo medio es 5.
+Como 7 es mayor que 5, se descarta la mitad izquierda.
+Finalmente, se compara 7 con el único número restante, que es 7. ¡Se ha encontrado el valor!
+La búsqueda binaria es ideal cuando trabajas con grandes volúmenes de datos y tienes listas previamente ordenadas.
+*/
